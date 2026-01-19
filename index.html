@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal da Raposa - Cruzeiro</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #0033a0; /* Azul Royal do Cruzeiro */
+            font-family: 'Arial Black', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* FUNDO DE NÚMEROS EM BRANCO (TRANSPARENTE) */
+        #fundo-cruzeiro {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -1;
+            color: rgba(255, 255, 255, 0.15); /* Números brancos clarinhos */
+            font-size: 14px;
+            line-height: 1.2;
+            overflow: hidden;
+            word-break: break-all;
+        }
+
+        /* PAINEL DA RAPOSA */
+        .painel {
+            background: white; /* Fundo branco para destacar */
+            padding: 30px;
+            border-radius: 20px;
+            border: 5px solid #ffcc00; /* Borda dourada de campeão */
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        h1 { color: #0033a0; font-size: 24px; margin-bottom: 5px; }
+        .subtitulo { color: #0033a0; font-weight: bold; margin-bottom: 20px; }
+
+        /* LINKS DO CRUZEIRO */
+        a {
+            display: block;
+            background: #0033a0;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+
+        a:hover {
+            background: #004dc0;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 51, 160, 0.5);
+        }
+
+        .emoji-raposa { font-size: 40px; }
+    </style>
+</head>
+<body>
+
+    <div id="fundo-cruzeiro"></div>
+
+    <div class="painel">
+        <div class="emoji-raposa">🦊⭐</div>
+        <h1>CRUZEIRO</h1>
+        <div class="subtitulo">O Maior de Minas</div>
+        
+        <a href="https://www.google.com">● Google</a>
+        <a href="https://www.youtube.com">■ YouTube</a>
+        <a href="https://www.wikipedia.org">▲ Wikipédia</a>
+        <a href="https://pranx.com/hacker/simulador-pt/">💻 Simulador Hacker</a>
+        <a href="https://poki.com/">🎮 Poki Jogo</a>
+    </div>
+
+    <script>
+        const fundo = document.getElementById('fundo-cruzeiro');
+        const sequencia = "01 02 03 04 05 06 07 08 09 10 <br> 11 12 13 14 15 16 17 18 19 20 <br> 21 22 23 24 25 26 27 28 29 30 <br> 31 32 33 34 35 36 37 38 39 40 <br> 41 42 43 44 45 46 47 48 49 50 <br>";
+        let texto = "";
+        for (let i = 0; i < 100; i++) { texto += sequencia; }
+        fundo.innerHTML = texto;
+    </script>
+</body>
+</html>
